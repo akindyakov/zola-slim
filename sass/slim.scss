@@ -41,6 +41,7 @@ table {
 td,
 th {
   padding: 0.25rem 0.5rem;
+  border: 1px solid #eee;
 }
 
 tbody tr:nth-child(odd) td,
@@ -446,6 +447,19 @@ button:active,
 
 .post-tag {
   margin-left: 5px;
+}
+
+.zola-anchor {
+  font-size: 75%;
+  color: transparent;
+  margin-left: 0.25em;
+  background-color: transparent;
+}
+
+.zola-anchor:hover,
+.zola-anchor:focus + .zola-anchor {
+  color: silver;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 799px) {

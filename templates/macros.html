@@ -73,7 +73,37 @@
     {% if config.extra.slim_footer %}
     <p>{{ config.extra.slim_footer | safe }}</p>
     {% else %}
-    <p>Powered by <a href="https://getzola.org">Zola</a></p>
+    <p>Powered by <a href="https://getzola.org">Zola</a> with <a href="https://github.com/jameshclrk/zola-slim">Slim</a> theme</p>
     {% endif %}
 </div>
 {% endmacro footer %}
+
+{% macro polish(content) %}
+    {{ content |
+       replace(from=":smile:", to="😄") |
+       replace(from=":sushi:", to="🍣") |
+       replace(from=":rice_ball:", to="🍙") |
+       replace(from=":ramen:", to="🍜") |
+       replace(from=":egg:", to="🥚") |
+       replace(from=":+1:", to="👍") |
+       replace(from=":thumbsup:", to="👍") |
+       replace(from=":stuck_out_tongue:", to="😛") |
+       replace(from=":grinning:", to="😀") |
+       replace(from=":frowning:", to="😦") |
+       replace(from=":heart:", to="❤") |
+       replace(from=":disappointed:", to="😞") |
+       replace(from=":tada:", to="🎉") |
+       replace(from=":dumpling:", to="🥟") |
+       replace(from=":goodbye:", to="👋") |
+       replace(from=":wave:", to="👋") |
+       replace(from=":hello:", to="👋") |
+       replace(from=":coffee:", to="☕") |
+       replace(from=":tea:", to="☕") |
+       replace(from=":ant:", to="🐜") |
+       replace(from=":gear:", to="⚙️") |
+       replace(from=":book:", to="📖") |
+       replace(from=":run:", to="🏃") |
+
+       safe
+    }}
+{% endmacro content %}
